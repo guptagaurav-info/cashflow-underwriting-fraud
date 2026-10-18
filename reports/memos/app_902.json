@@ -1,0 +1,29 @@
+{
+  "app_id": 902,
+  "industry": "restaurant",
+  "requested_amount": 47519.025354872894,
+  "decision": "REFER_FRAUD",
+  "offer_amount": 0.0,
+  "pd_12m": 0.0365,
+  "fraud_score": 0.9804,
+  "pd_reasons": [
+    "Avg balance / monthly revenue: 44%",
+    "Years in business: 1.27",
+    "Opex / revenue: 33%"
+  ],
+  "fraud_flags": [
+    "running balance does not reconcile",
+    "statement header does not tie out",
+    "PDF produced/modified by an editing tool"
+  ],
+  "key_metrics": {
+    "Avg monthly revenue (6m)": "$93,304",
+    "Revenue volatility (CV, 6m)": "0.12",
+    "Pro-forma DSCR incl. requested loan": "12.09",
+    "NSF / overdraft events (6m)": "0",
+    "Days with negative balance (6m)": "0",
+    "Distinct MCA funders (3m)": "0",
+    "Debt service / revenue (6m)": "0%",
+    "Liquidity runway (days)": "36.70"
+  }
+}

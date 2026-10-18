@@ -1,0 +1,25 @@
+{
+  "app_id": 2923,
+  "industry": "auto_repair",
+  "requested_amount": 94407.35303849405,
+  "decision": "APPROVE",
+  "offer_amount": 94000.0,
+  "pd_12m": 0.0585,
+  "fraud_score": 0.0001,
+  "pd_reasons": [
+    "Industry: auto repair",
+    "Years in business: 2.84",
+    "Largest single deposit share: 4%"
+  ],
+  "fraud_flags": [],
+  "key_metrics": {
+    "Avg monthly revenue (6m)": "$97,854",
+    "Revenue volatility (CV, 6m)": "0.16",
+    "Pro-forma DSCR incl. requested loan": "1.76",
+    "NSF / overdraft events (6m)": "0",
+    "Days with negative balance (6m)": "0",
+    "Distinct MCA funders (3m)": "0",
+    "Debt service / revenue (6m)": "0%",
+    "Liquidity runway (days)": "41.54"
+  }
+}

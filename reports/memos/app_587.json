@@ -1,0 +1,27 @@
+{
+  "app_id": 587,
+  "industry": "professional_svcs",
+  "requested_amount": 9138.856219230034,
+  "decision": "REFER_FRAUD",
+  "offer_amount": 0.0,
+  "pd_12m": 0.0286,
+  "fraud_score": 0.9804,
+  "pd_reasons": [
+    "Years in business: 1.83",
+    "Avg monthly revenue (3m): $15,064",
+    "Revenue volatility (CV, 6m): 0.14"
+  ],
+  "fraud_flags": [
+    "applied to 2+ other lenders in last 14 days"
+  ],
+  "key_metrics": {
+    "Avg monthly revenue (6m)": "$15,238",
+    "Revenue volatility (CV, 6m)": "0.14",
+    "Pro-forma DSCR incl. requested loan": "1.14",
+    "NSF / overdraft events (6m)": "0",
+    "Days with negative balance (6m)": "0",
+    "Distinct MCA funders (3m)": "1",
+    "Debt service / revenue (6m)": "6%",
+    "Liquidity runway (days)": "22.01"
+  }
+}

@@ -1,0 +1,13 @@
+duckdb==1.5.6
+lightgbm==4.7.0
+matplotlib==3.10.9
+numpy==2.4.4
+pandas==3.0.2
+pyarrow==26.0.0
+pytest>=8
+pyyaml>=6.0
+rapidfuzz==3.14.6
+scikit-learn==1.8.0
+scipy==1.17.1
+# optional: LLM adjudication step in the transaction agent (set ANTHROPIC_API_KEY)
+# anthropic

@@ -1,0 +1,25 @@
+{
+  "app_id": 2816,
+  "industry": "ecommerce",
+  "requested_amount": 101344.79069988395,
+  "decision": "REFER_CREDIT",
+  "offer_amount": 20500.0,
+  "pd_12m": 0.2857,
+  "fraud_score": 0.0061,
+  "pd_reasons": [
+    "Liquidity runway (days): 15.07",
+    "Requested amount / monthly revenue: 1.17",
+    "Pro-forma DSCR incl. requested loan: 0.63"
+  ],
+  "fraud_flags": [],
+  "key_metrics": {
+    "Avg monthly revenue (6m)": "$86,710",
+    "Revenue volatility (CV, 6m)": "0.52",
+    "Pro-forma DSCR incl. requested loan": "0.63",
+    "NSF / overdraft events (6m)": "0",
+    "Days with negative balance (6m)": "0",
+    "Distinct MCA funders (3m)": "2",
+    "Debt service / revenue (6m)": "12%",
+    "Liquidity runway (days)": "15.07"
+  }
+}

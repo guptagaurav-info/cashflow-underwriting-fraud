@@ -1,0 +1,35 @@
+seed: 7
+
+data:
+  txn_categories:
+    url: https://huggingface.co/datasets/DoDataThings/us-bank-transaction-categories-v2/resolve/main/transactions-synthetic.csv
+    path: data/raw/us_bank_txn_categories_v2.csv
+    sha256: 0424aed6e76f74a5b3b1ff61ccec43bc321622e6806da353b910b3b2c8108f6e
+  paysim:
+    url: https://huggingface.co/datasets/theman10/paysim/resolve/main/paysim.csv
+    path: data/raw/paysim.csv
+    sha256: 16910f90577b0d981bf8ff289714510bb89bc71bff7d3f220f024e287e4eea6b
+  warehouse: data/processed/warehouse.duckdb
+
+simulation:
+  n_businesses: 6000
+  statement_months: 6           # months of bank statements submitted with the application
+  forward_months: 12            # performance window for the default label
+  app_start: "2024-01-01"
+  app_months: 24                # applications arrive uniformly over 24 months
+  fraud_rate: 0.05
+  target_median_monthly_revenue: 45000
+
+split:
+  train_until: "2025-06-30"     # out-of-time: train on apps <= this date, test after
+
+classifier:
+  auto_accept_confidence: 0.90  # below this, a transaction is routed to the agent step
+
+decision:
+  pd_approve_max: 0.12
+  pd_decline_min: 0.30
+  fraud_refer_min: 0.30
+  target_dscr: 1.25
+  offer_term_months: 12
+  factor_rate: 1.25

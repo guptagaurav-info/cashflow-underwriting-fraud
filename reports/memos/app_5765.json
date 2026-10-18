@@ -1,0 +1,25 @@
+{
+  "app_id": 5765,
+  "industry": "healthcare",
+  "requested_amount": 44104.43080425628,
+  "decision": "DECLINE",
+  "offer_amount": 0.0,
+  "pd_12m": 0.5479,
+  "fraud_score": 0.0001,
+  "pd_reasons": [
+    "Liquidity runway (days): 8.12",
+    "Avg balance / monthly revenue: 27%",
+    "Pro-forma DSCR incl. requested loan: 0.54"
+  ],
+  "fraud_flags": [],
+  "key_metrics": {
+    "Avg monthly revenue (6m)": "$41,044",
+    "Revenue volatility (CV, 6m)": "0.20",
+    "Pro-forma DSCR incl. requested loan": "0.54",
+    "NSF / overdraft events (6m)": "0",
+    "Days with negative balance (6m)": "0",
+    "Distinct MCA funders (3m)": "2",
+    "Debt service / revenue (6m)": "15%",
+    "Liquidity runway (days)": "8.12"
+  }
+}
