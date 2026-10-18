@@ -1,5 +1,7 @@
 # Cash-Flow Underwriting & Fraud: From Bank Transactions to a Credit Decision
 
+> Companion repo: [smb-credit-pd-lgd](https://github.com/guptagaurav-info/smb-credit-pd-lgd) (PD / LGD / expected-loss pricing on 772K real SBA loans). Author: Gaurav Gupta.
+
 An end-to-end small-business lending pipeline, built the way a cash-flow underwriting platform works. Each application goes through these steps:
 
 1. Raw bank-statement transactions are classified, with **confidence routing to an agent step**.
