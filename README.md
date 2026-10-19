@@ -17,6 +17,8 @@ make all     # downloads public data (sha256-verified), simulates the book, runs
 make test
 ```
 
+**How it works:** flowcharts of the pipeline, the model and decision logic, and a proposed production design are in [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
+
 ## Data: what is real and what is simulated, and why
 
 | Layer | Source | Used for |
