@@ -19,12 +19,12 @@ make test
 
 **How it works:** flowcharts of the pipeline, the model and decision logic, and a proposed production design are in [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
 
-## Data: what is real and what is simulated, and why
+## Data: what is public, what is synthetic and what is simulated, and why
 
 | Layer | Source | Used for |
 |---|---|---|
-| Bank-transaction descriptors (68K, 17 categories, MIT) | [`DoDataThings/us-bank-transaction-categories-v2`](https://huggingface.co/datasets/DoDataThings/us-bank-transaction-categories-v2), modelled on real US bank formats (Chase ACH, `TST*`, `PP*`…) | Public classifier benchmark |
-| PaySim (6.36M mobile-money transactions with fraud labels) | [`theman10/paysim`](https://huggingface.co/datasets/theman10/paysim) | Fraud benchmark + a **data-validity check** (see below) |
+| Bank-transaction descriptors (68K, 17 categories, MIT) | [`DoDataThings/us-bank-transaction-categories-v2`](https://huggingface.co/datasets/DoDataThings/us-bank-transaction-categories-v2), a **synthetic** dataset modelled on real US bank formats (Chase ACH, `TST*`, `PP*`…) | Public classifier benchmark |
+| PaySim (6.36M **synthetic** mobile-money transactions with fraud labels; Lopez-Rojas, Elmir & Axelsson, EMSS 2016) | [`theman10/paysim`](https://huggingface.co/datasets/theman10/paysim) | Fraud benchmark + a **data-validity check** (see below) |
 | SMB lending book: 6,000 applicants, 1.72M transactions, 8,237 network applications | `src/cfu/simulate.py` | Full pipeline |
 
 **Why simulate:** no public dataset links small-business bank transactions to loan outcomes. The simulator encodes **mechanisms**, not labels:
@@ -134,7 +134,7 @@ Confirmed-fraud applications are **excluded from PD training**, because doctored
 - **Decisions**: APPROVE 69%, DECLINE 12%, DECLINE (capacity) 8%, REFER credit 7%, REFER fraud 4%.
 - **Sample memos** are in `reports/memos/` (HTML + JSON). Each shows key cash-flow metrics, the top risk drivers, and the fraud red flags that fired.
 
-### 5. A real-data trap: PaySim's balance fields
+### 5. A public-data trap: PaySim's balance fields
 
 Ledger arithmetic is a strong fraud signal on bank statements, so it was tested on PaySim first. **90.5% of *legitimate* PaySim transactions fail origin-balance reconciliation, versus 0.6% of fraudulent ones.** That is a simulator artefact, not a fraud mechanism. A model fed those fields learns the artefact and is unstable out of time, so the fields were **rejected**. The attribute-only PaySim model reaches an out-of-time AUC of 0.97 (PR-AUC 0.87).
 
